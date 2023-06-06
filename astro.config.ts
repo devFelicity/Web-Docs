@@ -5,9 +5,17 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
   integrations: [
     starlight({
-      title: 'My Docs',
+      logo: {
+        src: '/public/favicon.svg',
+      },
+      title: 'Felicity',
       social: {
+        discord: 'https://discord.gg/JBBqF6Pw2z',
         github: 'https://github.com/withastro/starlight',
+        twitter: 'https://twitter.com/devFelicity',
+      },
+      editLink: {
+        baseUrl: 'https://github.com/solelychloe/tryfelicity.one/edit/main',
       },
       sidebar: [
         {

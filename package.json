@@ -10,7 +10,14 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/starlight": "^0.0.15",
-    "astro": "^2.5.0"
+    "@astrojs/starlight": "^0.1.0",
+    "astro": "^2.5.7",
+    "astro-iconify": "^1.2.0"
+  },
+  "packageManager": "yarn@3.6.0",
+  "devDependencies": {
+    "eslint": "^8.42.0",
+    "eslint-config-clarity": "^1.0.1",
+    "prettier": "^2.8.8"
   }
 }
