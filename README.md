@@ -1,51 +1,31 @@
-# Starlight Starter Kit: Basics
+<div align="center">
+  <a href="https://felicity.pages.dev" title="Felicity's website">
+    <img 
+      src="public/favicon.svg"
+      height="100"
+      width="100"
+      alt="Felicity's logo"
+      title="Felicity's logo"
+    />
+    <h2>Felicity</h2>
+  </a>
 
-```
-npm create astro@latest -- --template withastro/starlight/examples/basics
-```
+  A powerful Discord bot, designed to enhance your Destiny 2 gaming experience.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/starlight/tree/main/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/starlight/tree/main/examples/basics)
+  <a href="https://astro.build">
+    <img src="https://astro.badg.es/v1/built-with-astro.svg" alt="Built with Astro" width="150" height="27.5">
+  </a>
+  
+  <br />
+</div>
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## License
 
-## 🚀 Project Structure
+This website is licensed under the [zlib][license] license.
 
-Inside of your Astro + Starlight project, you'll see the following folders and files:
+&copy; 2023 [Chloe Arciniega][chloe] & [Moons][moons].
 
-```
-.
-├── public/
-├── src/
-│   ├── assets/
-│   ├── content/
-│   │   ├── docs/
-│   │   └── config.ts
-│   └── env.d.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
-```
+[chloe]: https://arciniega.one "Chloe's Website"
+[moons]: https://links.leafhub.dev "Moons' website"
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
-
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
-
-Static assets, like favicons, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:3000`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+[license]: https://github.com/solelychloe/arciniega.one/blob/main/LICENSE 'zlib License'

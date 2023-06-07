@@ -1,7 +1,21 @@
 {
-  "name": "felicity-astro",
-  "type": "module",
+  "name": "@felicity/docs",
   "version": "0.0.1",
+  "type": "module",
+  "contributors": [
+    {
+      "name": "Chloe Arciniega",
+      "email": "solely@riseup.net",
+      "url": "https://arciniega.one"
+    },
+    {
+      "name": "Moons",
+      "email": "william.haskell2@gmail.com",
+      "url": "https://links.leafhub.dev"
+    }
+  ],
+  "license": "zlib",
+  "private": true,
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -9,12 +23,13 @@
     "preview": "astro preview",
     "astro": "astro"
   },
+  "repository": "https://github.com/solelychloe/felicity-astro",
+  "packageManager": "yarn@3.6.0",
   "dependencies": {
     "@astrojs/starlight": "^0.1.1",
     "astro": "^2.6.1",
     "astro-iconify": "^1.2.0"
   },
-  "packageManager": "yarn@3.6.0",
   "devDependencies": {
     "eslint": "^8.42.0",
     "eslint-config-clarity": "^1.0.1",
