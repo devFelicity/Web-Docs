@@ -23,7 +23,7 @@
     "preview": "astro preview",
     "astro": "astro"
   },
-  "repository": "https://github.com/solelychloe/felicity-astro",
+  "repository": "https://github.com/devFelicity/Web-Docs",
   "packageManager": "yarn@3.6.0",
   "dependencies": {
     "@astrojs/starlight": "^0.1.1",

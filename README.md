@@ -28,4 +28,4 @@ This website is licensed under the [zlib][license] license.
 [chloe]: https://arciniega.one "Chloe's Website"
 [moons]: https://links.leafhub.dev "Moons' website"
 
-[license]: https://github.com/solelychloe/felicity-astro/blob/main/LICENSE 'zlib License'
+[license]: https://github.com/devFelicity/Web-Docs/blob/main/LICENSE 'zlib License'

@@ -16,7 +16,7 @@ export default defineConfig({
         twitter: 'https://twitter.com/devFelicity',
       },
       editLink: {
-        baseUrl: 'https://github.com/solelychloe/felicity-astro/edit/main',
+        baseUrl: 'https://github.com/devFelicity/Web-Docs/edit/main',
       },
       sidebar: [
         {
