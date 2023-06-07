@@ -10,7 +10,7 @@
     <h2>Felicity</h2>
   </a>
 
-  A powerful Discord bot, designed to enhance your Destiny 2 gaming experience.
+  <p>A powerful Discord bot, designed to enhance your Destiny 2 gaming experience.</p>
 
   <a href="https://astro.build">
     <img src="https://astro.badg.es/v1/built-with-astro.svg" alt="Built with Astro" width="150" height="27.5">
@@ -28,4 +28,4 @@ This website is licensed under the [zlib][license] license.
 [chloe]: https://arciniega.one "Chloe's Website"
 [moons]: https://links.leafhub.dev "Moons' website"
 
-[license]: https://github.com/solelychloe/arciniega.one/blob/main/LICENSE 'zlib License'
+[license]: https://github.com/solelychloe/felicity-astro/blob/main/LICENSE 'zlib License'
