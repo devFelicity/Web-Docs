@@ -1,33 +1,35 @@
 ---
-title: Felicity
-description: Get started building your docs site with Starlight.
+title: Starlight 🌟 Build documentation sites with Astro
+description: Starlight helps you build beautiful, high-performance documentation websites with Astro.
 template: splash
+hero:
+  title: Felicity
+  tagline: A powerful Discord bot, designed to enhance your Destiny 2 gaming experience.
+  image:
+    html: <img src="/favicon.svg" />
+  actions:
+    - text: Add to Server
+      icon: external
+      variant: primary
+      link: https://discord.com/api/oauth2/authorize?client_id=709475072158728283&permissions=1505281630423&scope=bot%20applications.commands
+    - text: Read More
+      icon: right-arrow
+      link: /about/how-did-felicity-start
 ---
 
-:::caution 
-Felicity is in constant development, so bug reports and feature suggestions are welcome! 
-:::
+import { CardGrid, Card } from '@astrojs/starlight/components';
 
-## Enhance Your Destiny 2 Experience
-
-Felicity is a powerful Discord bot designed to enhance your Destiny 2 gaming experience. With a wide range of features,
-Felicity helps you track your craftable weapon patterns, view emblem information, access checkpoint bot data, manage
-guardians and collections, explore loot tables, and receive Twitch live alerts with VOD links.
-
-Whether you're a casual player or a seasoned guardian, Felicity is here to assist you on your journey through Destiny 2.
-Install Felicity today and take your Destiny 2 adventures to the next level!
-
-Key Features:
-
-- **Weapon Patterns**: Keep track of your progress towards crafting different weapon patterns.
-- **Emblem Information**: Get detailed information about emblems, including rarity and account shares.
-- **Checkpoint Bot Data**: Query d2checkpoint.com to view available checkpoint bots.
-- **Guardians & Collections**: Easily view information about your guardians and collections.
-- **Loot Tables**: Check the loot tables for various activities to plan your farming sessions effectively.
-- **Vendor Information**: Stay updated with the latest vendor information and sales.
-- **Roll Finder**: Look up recommended rolls for various weapons, curated by our own staff.
-- **Twitch Live Alerts**: Receive alerts when your favorite streamer goes live on Twitch.
-
-Note: For detailed usage examples and command documentation, please refer to the [dedicated page][commands].
-
-[commands]: /commands 'Commands page'
+<CardGrid>
+  <Card title="Weapon Patterns" icon="rocket">
+    Keep track of your progress towards crafting different weapon patterns.
+  </Card>
+  <Card title="Emblem Information" icon="magnifier">
+    Get detailed information about emblems, including rarity and account shares.
+  </Card>
+  <Card title="Roll Finder" icon="star">
+    Look up recommended rolls for various weapons, curated by our own staff.
+  </Card>
+  <Card title="Guardians & Collections" icon="open-book">
+    Easily view information about your Guardians and Collections.
+  </Card>
+</CardGrid>
