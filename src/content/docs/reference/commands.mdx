@@ -1,0 +1,53 @@
+---
+title: Commands
+description: Commands
+---
+
+:::caution 
+Felicity is in constant development, so bug reports and feature suggestions are welcome! 
+:::
+
+import Command from '../../../components/Command.astro';
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+<Tabs>
+  <TabItem label="Category 1">
+    <Command
+      name="checkpoint"
+      description="Find a checkpoint and join it."
+      args={['activity']}
+      example="name:Last Wish - Shuro Chi"
+      image="/commands/checkpoint.png"
+    />
+
+    <Command
+      name="checkpoint-list"
+      description="List all available checkpoints and their status."
+    />
+
+    <Command
+      name="crafted"
+      description="View all crafted weapon levels."
+    />
+
+    <Command
+      name="emblem rarest"
+      description="Gets the top rarest emblems in collections."
+      args={["count", "bungie-name"]}
+      optional={true}
+    />
+
+    <Command
+      name="emblem shares"
+      description="Look up account shared emblems of a player."
+      args={["bungie-name"]}
+      optional={true}
+      example="bungie-name:solely#4507"
+      image="/commands/emblem-shares.png"
+    />
+  </TabItem>
+
+  <TabItem label="General">
+
+  </TabItem>
+</Tabs>
