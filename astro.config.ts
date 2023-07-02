@@ -3,6 +3,7 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://felicity.pages.dev',
   integrations: [
     starlight({
       customCss: ['/src/assets/custom.css'],
@@ -12,7 +13,7 @@ export default defineConfig({
       title: 'Felicity',
       social: {
         discord: 'https://discord.gg/JBBqF6Pw2z',
-        github: 'https://github.com/withastro/starlight',
+        github: 'https://github.com/devFelicity/Web-Docs',
         twitter: 'https://twitter.com/devFelicity',
       },
       editLink: {
