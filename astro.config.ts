@@ -32,6 +32,19 @@ export default defineConfig({
           label: 'Reference',
           autogenerate: { directory: 'reference' },
         },
+        {
+          label: 'Terms & Conditions',
+          items: [
+            {
+              label: 'Privacy Policy',
+              link: '/privacy',
+            },
+            {
+              label: 'Terms of Service',
+              link: '/terms',
+            },
+          ],
+        },
       ],
     }),
   ],
