@@ -1,0 +1,10 @@
+---
+import Command from './Command.astro';
+import commands from '../utils/commands';
+---
+
+{
+  commands.map((cmd) => {
+    return <Command name={cmd.name} description={cmd.description} args={cmd.args} />;
+  })
+}

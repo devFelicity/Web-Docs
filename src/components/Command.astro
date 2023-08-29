@@ -1,19 +1,31 @@
 ---
-const { name, description, args, optional, example, image } = Astro.props;
+import type { Command as Props } from '../utils/commands';
+
+const { name, description, args, example, image } = Astro.props;
 ---
 
 <span class="command">
-  <h3 class="title"><code>/{name}</code></h3>
+  <h4 class="title"><code>/{name}</code></h4>
   <span class="description">{description}</span>
 
   {
     args && (
-      <span class="arguments bold">
-        Arguments:
-        {args.map((arg: string) => (
-          <code class="argument">[{arg}]</code>
-        ))}
-        {optional && '(optional)'}
+      <span class="arguments">
+        <h4 class="bold">Arguments:</h4>
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Required</th>
+          </tr>
+          {args.map((arg) => (
+            <tr>
+              <td>{arg.name}</td>
+              <td>{arg.description}</td>
+              <td>{arg.optional !== true ? '✅' : '❌'}</td>
+            </tr>
+          ))}
+        </table>
       </span>
     )
   }
