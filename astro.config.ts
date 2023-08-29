@@ -8,6 +8,16 @@ export default defineConfig({
   site: 'https://felicity.pages.dev',
   integrations: [
     starlight({
+      head: [
+        {
+          tag: 'script',
+          attrs: {
+            src: 'https://stats.ovy.sh/js/script.js',
+            'data-domain': 'tryfelicity.one',
+            defer: true
+          }
+        }
+      ],
       customCss: ['/src/assets/tailwind.css', '/src/assets/custom.css'],
       logo: {
         src: '/public/favicon.svg',
