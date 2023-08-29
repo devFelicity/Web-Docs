@@ -1,12 +1,14 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
+import tailwind from '@astrojs/tailwind';
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://felicity.pages.dev',
   integrations: [
     starlight({
-      customCss: ['/src/assets/custom.css'],
+      customCss: ['/src/assets/tailwind.css', '/src/assets/custom.css'],
       logo: {
         src: '/public/favicon.svg',
       },
@@ -22,15 +24,24 @@ export default defineConfig({
       sidebar: [
         {
           label: 'Felicity',
-          items: [{ label: 'Home Page', link: '/' }],
+          items: [
+            {
+              label: 'Home Page',
+              link: '/',
+            },
+          ],
         },
         {
           label: 'About',
-          autogenerate: { directory: 'about' },
+          autogenerate: {
+            directory: 'about',
+          },
         },
         {
           label: 'Reference',
-          autogenerate: { directory: 'reference' },
+          autogenerate: {
+            directory: 'reference',
+          },
         },
         {
           label: 'Terms & Conditions',
@@ -46,6 +57,10 @@ export default defineConfig({
           ],
         },
       ],
+    }),
+    tailwind({
+      // Disable the default base styles:
+      applyBaseStyles: false,
     }),
   ],
 });
