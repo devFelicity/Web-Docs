@@ -12,7 +12,7 @@ export default defineConfig({
         {
           tag: 'script',
           attrs: {
-            src: 'https://stats.ovy.sh/js/script.js',
+            src: 'https://plausible.moons.bio/js/script.js',
             'data-domain': 'tryfelicity.one',
             defer: true
           }
