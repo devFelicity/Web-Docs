@@ -14,11 +14,11 @@ export default defineConfig({
           attrs: {
             src: 'https://stats.ovy.sh/js/script.js',
             'data-domain': 'tryfelicity.one',
-            defer: true
-          }
-        }
+            defer: true,
+          },
+        },
       ],
-      customCss: ['/src/assets/tailwind.css', '/src/assets/custom.css'],
+      customCss: ['/src/assets/css/tailwind.css', '/src/assets/css/custom.css'],
       logo: {
         src: '/public/favicon.svg',
       },
