@@ -1,5 +1,6 @@
 ---
 import type { Command as Props } from '../utils/commands';
+import { Image } from 'astro:assets';
 
 const { name, description, args, example, image } = Astro.props;
 ---
@@ -44,7 +45,7 @@ const { name, description, args, example, image } = Astro.props;
     image && (
       <details>
         <summary>Example image</summary>
-        <img src={image} />
+        <Image src={image} alt="silly :3" />
       </details>
     )
   }

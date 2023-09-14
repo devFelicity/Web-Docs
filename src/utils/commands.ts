@@ -1,3 +1,7 @@
+import type { ImageMetadata } from 'astro';
+
+type Image = Promise<{ default: ImageMetadata }>;
+
 export interface Command {
   name: string;
   description: string;
@@ -7,10 +11,12 @@ export interface Command {
     optional?: boolean;
   }[];
   example?: string;
-  image?: string;
+  image?: Image;
 }
 
-const command = [
+const resolveImage = (img: string): Image => import(`../assets/images/${img}.gif`);
+
+const commands = [
   {
     name: 'checkpoint',
     description: 'Find a checkpoint and join it.',
@@ -20,14 +26,17 @@ const command = [
         description: 'Activity / encounter to search for.',
       },
     ],
+    image: resolveImage('checkpoint'),
   },
   {
     name: 'checkpoint-list',
     description: 'List all available checkpoints and their status.',
+    image: resolveImage('checkpoint-list'),
   },
   {
     name: 'crafted',
     description: 'View all crafted weapon levels.',
+    image: resolveImage('crafted'),
   },
   {
     name: 'emblem rarest',
@@ -44,6 +53,7 @@ const command = [
         optional: true,
       },
     ],
+    image: resolveImage('emblem-rarest'),
   },
   {
     name: 'emblem shares',
@@ -55,6 +65,7 @@ const command = [
         optional: true,
       },
     ],
+    image: resolveImage('emblem-shares'),
   },
   {
     name: 'lookup guardian',
@@ -66,10 +77,12 @@ const command = [
         optional: true,
       },
     ],
+    image: resolveImage('lookup-guardian'),
   },
   {
     name: 'lookup guardian-ranks',
     description: 'Look up triumphs and their completion status for Guardian Ranks.',
+    image: resolveImage('lookup-guardian-ranks'),
   },
   {
     name: 'lookup wish',
@@ -80,6 +93,7 @@ const command = [
         description: 'A wish number from the Last Wish raid.',
       },
     ],
+    image: resolveImage('lookup-wish'),
   },
 
   {
@@ -91,6 +105,7 @@ const command = [
         description: 'A Dungeon or Raid to look up loot tables for.',
       },
     ],
+    image: resolveImage('loot-table'),
   },
   {
     name: 'memento',
@@ -109,20 +124,7 @@ const command = [
         description: 'What type of memento are you looking for?',
       },
     ],
-  },
-  {
-    name: 'metrics',
-    description: 'Fetch metrics from your Destiny profile.',
-    args: [
-      {
-        name: 'query',
-        description: 'Specific the metric that you want to pull values for.',
-      },
-    ],
-  },
-  {
-    name: 'pb raids',
-    description: 'Gets your fastest raids.',
+    image: resolveImage('memento'),
   },
   {
     name: 'recipes',
@@ -134,6 +136,7 @@ const command = [
         optional: true,
       },
     ],
+    image: resolveImage('recipes'),
   },
   {
     name: 'roll-finder',
@@ -148,45 +151,7 @@ const command = [
         description: 'Name of the weapon to search for.',
       },
     ],
-  },
-  {
-    name: 'server twitch add',
-    description: 'Add a Twitch stream to the server.',
-    args: [
-      {
-        name: 'twitchname',
-        description: "The stream name you'd like to subscribe to.",
-      },
-      {
-        name: 'channel',
-        description: "The Discord channel you'd like me to post notifications to.",
-      },
-      {
-        name: 'everyone',
-        description: 'Should I ping everyone when they go live?',
-        optional: true,
-      },
-      {
-        name: 'role',
-        description: 'Should I ping a role when they go live?',
-        optional: true,
-      },
-      {
-        name: 'discordname',
-        description: 'If the streamer is in your server, I can mention them.',
-        optional: true,
-      },
-    ],
-  },
-  {
-    name: 'server twitch remove',
-    description: 'Remove an existing Twitch stream from the server.',
-    args: [
-      {
-        name: 'twitchname',
-        description: "Stream name you'd like to unsubscribe from.",
-      },
-    ],
+    image: resolveImage('roll-finder'),
   },
   {
     name: 'server configure',
@@ -216,14 +181,17 @@ const command = [
         optional: true,
       },
     ],
+    image: resolveImage('server-configure'),
   },
   {
     name: 'server summary',
     description: 'Get a summary of current server settings',
+    image: resolveImage('server-summary'),
   },
   {
     name: 'support',
     description: 'support',
+    image: resolveImage('support'),
   },
   {
     name: 'twab',
@@ -235,31 +203,38 @@ const command = [
         optional: true,
       },
     ],
+    image: resolveImage('twab'),
   },
   {
     name: 'user register',
     description: 'Register your Bungie profile to the bot.',
+    image: resolveImage('user-register'),
   },
   {
     name: 'user remove',
     description: 'Remove your profile link from the bot.',
-  },
-  {
-    name: 'vendor gunsmith',
-    description: 'Fetch Banshee weapon inventory which includes D2Gunsmith and LightGG links.',
-  },
-  {
-    name: 'vendor xur',
-    description: 'Fetch Xür inventory which includes D2Gunsmith and LightGG links.',
+    image: resolveImage('user-remove'),
   },
   {
     name: 'vendor ada-1',
     description: 'Get list of shaders currently available at Ada-l.',
+    image: resolveImage('vendor-ada-1'),
   },
   {
-    name: 'vendor saint-14',
+    name: 'vendor gunsmith',
+    description: 'Fetch Banshee weapon inventory which includes D2Gunsmith and LightGG links.',
+    image: resolveImage('vendor-gunsmith'),
+  },
+  {
+    name: 'vendor saint14',
     description: 'Fetch Saint-14 (Trials of Osiris) reputation rewards for the week.',
+    image: resolveImage('vendor-saint14'),
+  },
+  {
+    name: 'vendor xur',
+    description: 'Fetch Xür inventory which includes D2Gunsmith and LightGG links.',
+    image: resolveImage('vendor-xur'),
   },
 ] satisfies Command[];
 
-export default command;
+export default commands;
