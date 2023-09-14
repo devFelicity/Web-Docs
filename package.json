@@ -26,15 +26,15 @@
   "packageManager": "pnpm@8.7.0",
   "repository": "https://github.com/devFelicity/Web-Docs",
   "dependencies": {
-    "@astrojs/starlight": "^0.8.0",
-    "@astrojs/starlight-tailwind": "^1.0.2",
-    "@astrojs/tailwind": "^4.0.0",
-    "astro": "^2.10.15",
+    "@astrojs/starlight": "^0.9.1",
+    "@astrojs/starlight-tailwind": "^2.0.0",
+    "@astrojs/tailwind": "^5.0.0",
+    "astro": "^3.0.12",
     "tailwindcss": "^3.3.3"
   },
   "devDependencies": {
-    "@typescript-eslint/parser": "^6.5.0",
-    "eslint": "^8.48.0",
+    "@typescript-eslint/parser": "^6.7.0",
+    "eslint": "^8.49.0",
     "eslint-config-clarity": "^1.0.6",
     "prettier": "^3.0.3",
     "typescript": "^5.2.2"
