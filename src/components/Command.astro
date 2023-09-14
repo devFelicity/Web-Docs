@@ -5,22 +5,24 @@ import { Image } from 'astro:assets';
 const { name, description, args, example, image } = Astro.props;
 ---
 
-<span class="command">
+<span class="command flex flex-col py-5 gap-3">
   <h4 class="title"><code>/{name}</code></h4>
   <span class="description">{description}</span>
 
   {
     args && (
       <span class="arguments">
-        <h4 class="bold">Arguments:</h4>
+        <p>🪄 This command accepts the following arguments:</p>
+
         <table>
           <tr>
             <th>Name</th>
             <th>Description</th>
             <th>Required</th>
           </tr>
+
           {args.map((arg) => (
-            <tr>
+            <tr class="text-center">
               <td>{arg.name}</td>
               <td>{arg.description}</td>
               <td>{arg.optional !== true ? '✅' : '❌'}</td>
@@ -32,7 +34,7 @@ const { name, description, args, example, image } = Astro.props;
   }
   {
     example && (
-      <span class="example bold">
+      <span class="example">
         Example:
         <code>
           /{name} {example}
@@ -44,33 +46,11 @@ const { name, description, args, example, image } = Astro.props;
   {
     image && (
       <details>
-        <summary>Example image</summary>
-        <Image src={image} alt="silly :3" />
+        <summary class="cursor-pointer">View example image</summary>
+        <Image src={image} alt={`Example usage for the ${name} command`} />
       </details>
     )
   }
 </span>
 
 <hr />
-
-<style>
-  hr {
-    border-color: #cdd6f4;
-  }
-
-  summary {
-    cursor: pointer;
-  }
-
-  .command {
-    padding-top: 1em;
-    padding-bottom: 1em;
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-  }
-
-  .bold {
-    font-weight: 700;
-  }
-</style>
