@@ -5,12 +5,8 @@ import commands, { type Command as CommandType } from '../utils/commands';
 
 {
   commands.map((cmd: CommandType) => {
-    return <Command
-      name={cmd.name}
-      description={cmd.description}
-      args={cmd.args}
-      example={cmd.example}
-      image={cmd.image}
-    />;
+    return (
+      <Command name={cmd.name} description={cmd.description} args={cmd.args} example={cmd.example} image={cmd.image} />
+    );
   })
 }
