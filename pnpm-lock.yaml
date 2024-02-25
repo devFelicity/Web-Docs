@@ -10,7 +10,7 @@ dependencies:
     version: 0.9.1(astro@3.0.12)
   '@astrojs/starlight-tailwind':
     specifier: ^2.0.0
-    version: 2.0.0(@astrojs/starlight@0.9.1)(@astrojs/tailwind@5.0.0)(tailwindcss@3.3.3)
+    version: 2.0.1(@astrojs/starlight@0.9.1)(@astrojs/tailwind@5.0.0)(tailwindcss@3.3.3)
   '@astrojs/tailwind':
     specifier: ^5.0.0
     version: 5.0.0(astro@3.0.12)(tailwindcss@3.3.3)
@@ -132,8 +132,8 @@ packages:
       zod: 3.21.1
     dev: false
 
-  /@astrojs/starlight-tailwind@2.0.0(@astrojs/starlight@0.9.1)(@astrojs/tailwind@5.0.0)(tailwindcss@3.3.3):
-    resolution: {integrity: sha512-4nMAYpjygQAOHIEXqRCFqjxpqTiCt8vFVlfr+glrJL7JCFYaKod/KQQoY/ykPy1Ez/QTPp424vmNfDJXxZoBRw==}
+  /@astrojs/starlight-tailwind@2.0.1(@astrojs/starlight@0.9.1)(@astrojs/tailwind@5.0.0)(tailwindcss@3.3.3):
+    resolution: {integrity: sha512-niMgFcR7NHcsBVy8UAN3F2gqhmoN5v83st5Hu4YzvUL+6SNwjQmIipXppXdN9+iVneRjPr6PLGzDfI+wnjSBWQ==}
     peerDependencies:
       '@astrojs/starlight': '>=0.9.0'
       '@astrojs/tailwind': ^5.0.0
