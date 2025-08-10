@@ -23,7 +23,7 @@
     "build": "astro build",
     "preview": "astro preview"
   },
-  "packageManager": "pnpm@8.8.0",
+  "packageManager": "pnpm@8.15.9",
   "repository": "https://github.com/devFelicity/Web-Docs",
   "dependencies": {
     "@astrojs/starlight": "^0.9.1",
